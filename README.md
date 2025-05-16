@@ -18,3 +18,5 @@ Welcome! This repo includes 10 shell scripting mini-projects from beginner to in
 | 10 | CPU Hog Detector            | `ps`, `awk`, alert on CPU spike         |
 
 
+## Project Structure:
+![screenshot](./screenshot.png)
