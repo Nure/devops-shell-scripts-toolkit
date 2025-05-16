@@ -1,0 +1,30 @@
+# ============================
+# Sample Crontab Entries
+# ============================
+
+# ┌──────────── minute (0 - 59)
+# │ ┌────────── hour (0 - 23)
+# │ │ ┌──────── day of month (1 - 31)
+# │ │ │ ┌────── month (1 - 12)
+# │ │ │ │ ┌──── day of week (0 - 6) (Sunday=0)
+# │ │ │ │ │
+# │ │ │ │ │
+# * * * * *  command_to_execute
+
+# ========== SCRIPT EXAMPLES ==========
+
+# Backup Documents every day at 2 AM
+0 2 * * * /home/username/devops-shell-toolkit/scripts/02_backup.sh >> /home/username/logs/backup.log 2>&1
+
+# Rotate logs every Monday at 3 AM
+0 3 * * 1 /home/username/devops-shell-toolkit/scripts/08_log_rotator.sh >> /home/username/logs/logrotate.log 2>&1
+
+# Monitor system resources every 5 minutes
+*/5 * * * * /home/username/devops-shell-toolkit/scripts/07_sys_monitor.sh
+
+# Auto-deploy repo every 15 minutes
+*/15 * * * * /home/username/devops-shell-toolkit/scripts/09_git_autodeploy.sh
+
+# Detect CPU hogs every hour and log output
+0 * * * * /home/username/devops-shell-toolkit/scripts/10_cpu_hog_detector.sh >> /home/username/logs/cpuhogs.log 2>&1
+
